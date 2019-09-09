@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "996164208711",
+    "firebase_url": "https://salozone-home-salon-services.firebaseio.com",
+    "project_id": "salozone-home-salon-services",
+    "storage_bucket": "salozone-home-salon-services.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996164208711:android:596e71fc4866db59",
+        "android_client_info": {
+          "package_name": "com.example.salozonehomesalonservices"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "996164208711-p610m514nbcv4klsv9d5401h9ihkcpv0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.salozonehomesalonservices",
+            "certificate_hash": "57875f80865bb52ae928c4f658ab7fe8626bfc46"
+          }
+        },
+        {
+          "client_id": "996164208711-qn6jbaf71rh44ptnnkf09hmqhmicj2gt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWFfjxNE8YqakslJCh8JVPKzPWw_wtdE4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "996164208711-qn6jbaf71rh44ptnnkf09hmqhmicj2gt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
