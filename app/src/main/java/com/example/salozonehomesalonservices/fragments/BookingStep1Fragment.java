@@ -16,6 +16,7 @@ import com.example.salozonehomesalonservices.Adapter.MySalonAdapter;
 import com.example.salozonehomesalonservices.Interface.IAllSalonLoadListener;
 import com.example.salozonehomesalonservices.Interface.IBranchLoadListener;
 import com.example.salozonehomesalonservices.R;
+import com.example.salozonehomesalonservices.common.Common;
 import com.example.salozonehomesalonservices.common.SpacesItemDecoration;
 import com.example.salozonehomesalonservices.model.Salon;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -141,6 +142,8 @@ public class BookingStep1Fragment extends Fragment implements IAllSalonLoadListe
     private void loadBranchOfCity(String cityName) {
 
         dialog.show();
+        Common.city = cityName;
+
         branchRef = FirebaseFirestore.getInstance()
                 .collection("AllSalon")
                 .document(cityName)
@@ -153,7 +156,11 @@ public class BookingStep1Fragment extends Fragment implements IAllSalonLoadListe
                 if(task.isSuccessful())
                 {
                     for(QueryDocumentSnapshot documentSnapshot:task.getResult())
-                        list.add(documentSnapshot.toObject(Salon.class));
+                    {
+                        Salon salon = documentSnapshot.toObject(Salon.class);
+                        salon.setSalondId(documentSnapshot.getId());
+                        list.add(salon);
+                    }
                     iBranchLoadListener.onBranchLoadSuccess(list);
                 }
             }
